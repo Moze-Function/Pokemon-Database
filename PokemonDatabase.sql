@@ -17,6 +17,7 @@ DROP TABLE IF EXISTS Regions;
 -- ====================================== POKEMON AKA CREATE TABLES ====================================== 
 CREATE TABLE Pokemon (
 	pokemon_id INT PRIMARY KEY NOT NULL,
+    pokedex_num DOUBLE,
     pokemon_name TEXT,
     height_m DOUBLE,
     weight_kg DOUBLE,
@@ -1069,28 +1070,29 @@ VALUES
 	(395, 84, 86, 88, 111, 101, 60);
     
 -- -------------------------------------------// POKEMON \\---------------------------------------
-INSERT INTO Pokemon(pokemon_id, pokemon_name, height_m, weight_kg, special_type, evolves)
+INSERT INTO Pokemon(pokemon_id, pokedex_num, pokemon_name, height_m, weight_kg, special_type, evolves)
 VALUES
-	(387, "Turtwig", 0.4, 10.2, "Starter", TRUE),
-    (388, "Grotle", 1.1, 97, "Starter", TRUE),
-    (389, "Torterra", 2.2, 310, "Starter", FALSE),
-    (390, "Chimchar", 0.5, 6.2, "Starter", TRUE),
-    (391, "Monferno", 0.9, 22, "Starter", TRUE),
-    (392, "Infernape", 1.2, 55, "Starter", FALSE),
-	(393, "Piplup", 0.4, 5.2, "Starter", TRUE),
-	(394, "Prinplup", 0.8, 23, "Starter", TRUE),
-	(395, "Empoleon", 1.7, 84.5, "Starter", FALSE);
+	(481, 387, "Turtwig", 0.4, 10.2, "Starter", TRUE),
+    (482, 388, "Grotle", 1.1, 97, "Starter", TRUE),
+    (483, 389, "Torterra", 2.2, 310, "Starter", FALSE),
+    (484, 390, "Chimchar", 0.5, 6.2, "Starter", TRUE),
+    (485, 391, "Monferno", 0.9, 22, "Starter", TRUE),
+    (486, 392, "Infernape", 1.2, 55, "Starter", FALSE),
+	(487, 393, "Piplup", 0.4, 5.2, "Starter", TRUE),
+	(488, 394, "Prinplup", 0.8, 23, "Starter", TRUE),
+	(489, 395, "Empoleon", 1.7, 84.5, "Starter", FALSE);
 
 -- -- ------------------------------------------// POKEMON REFERENCES \\---------------------------------------
 INSERT INTO PokeRefs(pokemon_id, type_id, sub_type_id, region_id, ability_id, sub_ability_id, hidden_ability_id, stat_id)
 VALUES 
-	(387, 5, 19, 4, 163, 1, 223, 387),
-    (388, 5, 19, 4, 163, 1, 223, 388),
-    (389, 5, 9, 4, 163, 1, 223, 389),
-    (390, 2, 19, 4, 24, 1, 119, 390),
-    (391, 2, 7, 4, 24, 1, 119, 391),
-    (392, 2, 7, 4, 24, 1, 119, 392),
-	(393, 3, 19, 4, 273, 1, 51, 393),
-	(394, 3, 19, 4, 273, 1, 51, 394),
-	(395, 3, 17, 4, 273, 1, 51, 394);
+	(481, 5, 19, 4, 163, 1, 223, 387),
+    (482, 5, 19, 4, 163, 1, 223, 388),
+    (483, 5, 9, 4, 163, 1, 223, 389),
+    (484, 2, 19, 4, 24, 1, 119, 390),
+    (485, 2, 7, 4, 24, 1, 119, 391),
+    (486, 2, 7, 4, 24, 1, 119, 392),
+	(487, 3, 19, 4, 273, 1, 51, 393),
+	(488, 3, 19, 4, 273, 1, 51, 394),
+	(489, 3, 17, 4, 273, 1, 51, 395);
+		
 		
