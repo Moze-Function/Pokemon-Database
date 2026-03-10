@@ -17,6 +17,12 @@ ON Pokerefs.sub_ability_id = SubAbilities.sub_ability_id
 INNER JOIN HiddenAbilities
 ON Pokerefs.hidden_ability_id = HiddenAbilities.hidden_ability_id
 INNER JOIN Stats
-ON Pokerefs.stat_id = Stats.stat_id
+ON Pokerefs.stat_id = Stats.stat_id;
 -- ----------------------------------------- INPUT -------------------------------------------------------------
-WHERE pokedex_num LIKE '421%';
+-- WHERE ability LIKE "AR%";
+-- WHERE pokedex_num LIKE "479%";
+
+
+-- SELECT *
+-- FROM Abilities
+-- WHERE ability LIKE '%';
